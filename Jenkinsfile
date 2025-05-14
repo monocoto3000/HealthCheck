@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/monocoto3000/HealthCheck.git'
+                git branch: 'develop', url: 'https://github.com/monocoto3000/HealthCheck.git'
             }
         }
 
