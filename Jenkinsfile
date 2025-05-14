@@ -25,8 +25,9 @@ pipeline {
 
         stage('Deploy') {
             steps {
+                sshagent(['ssh-key-ec2']) {  
                 sh """
-                ssh -i $SSH_KEY -o StrictHostKeyChecking=no $EC2_USER@$EC2_IP '
+                ssh -o StrictHostKeyChecking=no $EC2_USER@$EC2_IP '
                     cd $REMOTE_PATH &&
                     git pull origin main &&
                     npm ci &&
