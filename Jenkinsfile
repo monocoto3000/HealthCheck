@@ -6,7 +6,7 @@ pipeline {
         EC2_USER = 'ubuntu'
         EC2_IP = '107.22.77.233'
         REMOTE_PATH = '/home/ubuntu/HealthCheck'
-        SSH_KEY = credentials('ssh-key-ec2')
+        SSH_KEY = credentials('ssh-key-ec2-1')
     }
 
     stages {
